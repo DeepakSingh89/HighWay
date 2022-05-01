@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ownerModule.vehicleOwnerfragment.AddDriverFragmentForVehicleOwner">
+
+    <androidx.appcompat.widget.Toolbar android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary">
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:tint="@color/white"
+            android:src="@drawable/back_arrow_icon"></ImageView>
+
+        <TextView
+            android:id="@+id/toolbar_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#fff"
+            android:fontFamily="sans-serif"
+            style="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
+            android:layout_gravity="center" />
+
+    </androidx.appcompat.widget.Toolbar>
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:fillViewport="true">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/margin_left_10"
+        android:paddingRight="@dimen/padding_right_10">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_top_5"
+            android:paddingLeft="5sp"
+            android:text="Driver Name"
+            android:textColor="@color/black"
+            android:textSize="@dimen/size_15"
+            android:textStyle="normal" />
+
+        <EditText
+            android:id="@+id/EdtTxtDriverName"
+            android:layout_width="match_parent"
+            android:layout_marginTop="@dimen/margin_top_5"
+            android:layout_height="45dp"
+            android:padding="10dp"
+            android:singleLine="true"
+            android:background="@drawable/completed_fragment_item_shape"
+            android:hint="Enter driver name "
+            android:inputType="textCapWords"
+            android:paddingLeft="5sp" />
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_top_10"
+            android:inputType="phone"
+            android:paddingLeft="5sp"
+            android:text="Mobile Number "
+            android:textColor="@color/black"
+            android:textSize="@dimen/size_15"
+            android:textStyle="normal" />
+
+        <EditText
+            android:id="@+id/EdtTxtDriverMobNo"
+            android:layout_width="match_parent"
+            android:layout_marginTop="5dp"
+            android:layout_height="45dp"
+            android:background="@drawable/completed_fragment_item_shape"
+            android:hint="Enter mobile number"
+            android:inputType="phone"
+            android:maxLength="10"
+            android:singleLine="true"
+            android:padding="10dp"
+            android:paddingLeft="5sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_top_10"
+            android:paddingLeft="5sp"
+            android:text="Email id (optional) "
+            android:textColor="@color/black"
+            android:textSize="@dimen/size_15"
+            android:textStyle="normal" />
+
+        <EditText
+            android:id="@+id/EdtTxtDriverEmailNos"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="@drawable/completed_fragment_item_shape"
+            android:hint="Enter email id  "
+            android:padding="10dp"
+            android:singleLine="true"
+            android:inputType="textEmailAddress"
+            android:layout_marginTop="5dp"
+            android:paddingLeft="5sp" />
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/completed_fragment_item_shape"
+            android:layout_height="47dp">
+        <Spinner
+            android:id="@+id/spState"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:padding="@dimen/_10dp"
+            android:gravity="left"
+            android:visibility="visible"></Spinner>
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/completed_fragment_item_shape"
+            android:layout_height="47dp">
+            <Spinner
+                android:id="@+id/spCity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:padding="@dimen/_10dp"
+                android:gravity="left"
+
+                android:visibility="visible"></Spinner>
+        </RelativeLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_marginTop="10dp"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:layout_marginRight="@dimen/margin_right_5"
+                android:layout_weight="1"
+                android:inputType="textCapWords"
+                android:maxLength="16"
+                android:maxLines="1"
+                android:paddingLeft="5sp"
+                android:text="DL Number  "
+                android:textColor="@color/black"
+                android:textSize="@dimen/size_15"
+                android:textStyle="normal" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:layout_marginRight="@dimen/margin_right_20"
+                android:layout_weight="1"
+                android:paddingLeft="5dp"
+                android:text="DL Expire Date "
+                android:textColor="@color/black"
+                android:textSize="@dimen/size_15"
+                android:textStyle="normal" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/EdtTxtDlNumber"
+                android:layout_width="wrap_content"
+                android:layout_height="45dp"
+                android:layout_marginTop="5dp"
+                android:layout_weight="1"
+                android:padding="10dp"
+                android:singleLine="true"
+                android:background="@drawable/completed_fragment_item_shape"
+                android:hint="Enter Dl number "
+                android:inputType="text"
+                android:maxLines="1"
+                android:maxLength="16"
+                android:paddingLeft="5sp" />
+
+            <TextView
+                android:id="@+id/EdtTxtDlExpireDate"
+                android:layout_width="wrap_content"
+                android:layout_height="45dp"
+                android:layout_marginLeft="5sp"
+                android:layout_weight="1"
+
+                android:singleLine="true"
+                android:padding="10dp"
+                android:background="@drawable/completed_fragment_item_shape"
+                android:hint="DL expiry date"
+                android:inputType="date"
+                android:paddingLeft="5dp" />
+
+            <ImageView
+                android:id="@+id/ImgDatePicker"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                app:srcCompat="@drawable/calender_image" />
+        </LinearLayout>
+
+<!--
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_5"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_5"
+                android:paddingLeft="5sp"
+                android:text="Vehicle Name "
+                android:textColor="@color/black"
+                android:textSize="@dimen/size_15"
+                android:textStyle="normal" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/completed_fragment_item_shape">
+
+                <Spinner
+                    android:id="@+id/VehicleSpinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginEnd="4dp"
+                    android:layout_marginBottom="4dp" />
+
+            </LinearLayout>
+        </LinearLayout>-->
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:paddingLeft="5sp"
+            android:text="Address "
+            android:textColor="@color/black"
+            android:textSize="@dimen/size_15"
+            android:textStyle="normal" />
+
+        <EditText
+            android:id="@+id/EdtTxtEnterDriverAdd"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin_height_80"
+            android:background="@drawable/completed_fragment_item_shape"
+            android:gravity="top|left"
+            android:layout_marginTop="5dp"
+            android:hint="Enter driver address  "
+            android:inputType="textMultiLine"
+            android:maxLength="200"
+            android:maxLines="5"
+            android:paddingLeft="5sp"
+            android:text="@string/newline" />
+
+
+        <Button
+            android:id="@+id/BtnAddNewDriver"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="20dp"
+            android:layout_marginTop="@dimen/margin_top_30"
+            android:background="@drawable/btn_shape_draw"
+            android:paddingLeft="@dimen/padding_left_40"
+            android:paddingRight="@dimen/padding_right_40"
+            android:text="Add New Driver "
+            android:textColor="@color/project_yellow_color" />
+    </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

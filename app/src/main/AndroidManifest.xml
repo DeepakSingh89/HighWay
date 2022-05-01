@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.highway">
+
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <uses-permission android:name="android.permission.READ_SMS" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ANSWER_PHONE_CALLS" />
+    <uses-permission android:name="android.permission.READ_PHONE_NUMBERS" />
+    <uses-permission android:name="android.permission.MANAGE_OWN_CALLS" />
+    <uses-permission android:name="android.permission.PROCESS_OUTGOING_CALLS" />
+    <uses-permission android:name="android.permission.READ_CALL_LOG" />
+    <uses-permission android:name="android.permission.WRITE_CALL_LOG" />
+    <uses-permission android:name="android.permission.WRITE_CONTACTS" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+    <uses-feature
+        android:glEsVersion="0x00020000"
+        android:required="true" />
+
+    <application
+        android:name=".common.base.HighwayApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/highway_logo"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true">
+        <activity android:name=".millUserModule.milluserActivity.MillUserAllTripActivity"
+            android:theme="@style/AppTheme2"></activity>
+        <activity
+            android:name=".ownerModule.vehicleOwnerActivities.OwnerAllTripActivity"
+            android:theme="@style/AppTheme2" />
+        <activity
+            android:name=".drivermodule.driverActivity.CancelTripDetailsByDriverActivity"
+            android:theme="@style/AppTheme2" />
+        <activity
+            android:name=".customer.customerActivity.CustomerAllTripsActivity"
+            android:theme="@style/AppTheme2" />
+        <activity
+            android:name=".customer.customerActivity.CancelTripDetailsForCustomerActivity"
+            android:theme="@style/AppTheme2" />
+        <activity
+            android:name=".drivermodule.driverActivity.CompletedTripDetailsForDriverActivity"
+            android:theme="@style/AppTheme2" />
+        <activity
+            android:name=".customer.customerActivity.CompletedTripDetailsForCustomersActivity"
+            android:theme="@style/AppTheme2" />
+        <activity android:name=".customer.customerActivity.TripTrackingByCustomerActivity" />
+        <activity android:name=".drivermodule.driverActivity.DriverAllTripsActivity" android:theme="@style/AppTheme2" />
+
+        <receiver
+            android:name=".reciever.PushReciever"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.newbooking.call" />
+            </intent-filter>
+        </receiver>
+
+        <service
+            android:name=".broadCastReceiver.MyIntentService"
+            android:exported="false" />
+
+        <activity
+            android:name=".customer.customerActivity.BookingInfoDetailsActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".customer.customerActivity.CustomerAllTripsActivityNew"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name=".customer.customerActivity.GoodTypeDetailsRecyclerItemActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".customer.customerActivity.DropActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".customer.customerActivity.TripBookingActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".customer.customerActivity.CancelOrderTripByCustomerWithReasonActivity"
+            android:screenOrientation="portrait" />
+
+        <activity android:name=".ownerModule.vehicleOwnerActivities.GetAllVehicleDetailsActivity"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name=".common.base.bookingBottomSheet.BottomProgressBarActivity"
+            android:screenOrientation="portrait" />
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" /> <!-- The API key for Google Maps-based APIs. -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyDRMI4wJHUfwtsX3zoNqVaTReXyHtIAT6U" />
+
+        <activity
+            android:name=".common.base.activity.SplashActivity"
+            android:screenOrientation="portrait">
+
+            <!-- <activity android:name=".TryActivity" android:screenOrientation="portrait"> -->
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+          android:name=".customer.customerActivity.WebViewActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".customer.customerActivity.GoodsTypeDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".customer.customerActivity.BookingWithDetailsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".customer.customerActivity.WelcomeActivityForCustomer"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".customer.customerActivity.ConformBookingActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".customer.customerActivity.BookingConformedActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".millUserModule.milluserActivity.WelcomeActivityForMiller"
+            android:screenOrientation="portrait" />
+        <activity android:name=".ownerModule.vehicleOwnerActivities.AddDriverVehicleOwnerActivity"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name=".drivermodule.driverActivity.WelcomeDriverActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".ownerModule.vehicleOwnerActivities.OwnerMapActivity"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name=".ownerModule.vehicleOwnerActivities.WelcomeOwnerActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".common.base.activity.DashBoardActivity"
+            android:label=""
+
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".common.base.activity.LoginOptionActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".millUserModule.milluserActivity.LoginActivityForMiller"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".common.base.activity.MobileOtpVerificationActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".common.base.BaseActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".customer.customerActivity.LoginActivityForCustomer"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ownerModule.vehicleOwnerActivities.LoginActivityForVehicleOwner"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".common.base.activity.RegistrationDetailsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".drivermodule.driverActivity.LoginActivityForDriver"
+            android:screenOrientation="portrait" />
+
+        <service android:name=".common.base.firebaseService.MyFirebaseServiceMessaging">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service> <!-- Recievers -->
+        <receiver android:name=".reciever.SmsReceiver">
+            <intent-filter>
+                <action android:name="android.provider.Telephony.SMS_RECEIVED" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name=".reciever.PushNavigateReceiver"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="custom.notification.navigation" />
+            </intent-filter>
+        </receiver>
+    </application>
+
+</manifest>

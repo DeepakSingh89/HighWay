@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/nav_new_booking"
+            android:icon="@drawable/new_booking_image"
+            android:title="@string/menu_new_booking" />
+        <item
+            android:id="@+id/nav_my_booking"
+            android:icon="@drawable/my_booking_image"
+            android:title="@string/menu_my_booking" />
+
+        <item
+            android:id="@+id/nav_add_driver"
+            android:icon="@drawable/add_driver"
+            android:title="@string/menu_add_driver" />
+
+        <item
+            android:id="@+id/nav_add_vehicle"
+            android:icon="@drawable/add_vihicle"
+            android:title="@string/menu_add_vehicle" />
+        <item
+            android:id="@+id/nav_assign_D2V"
+            android:icon="@drawable/assign_driver_vehicle"
+            android:title="@string/menu_assign_driver_to_vehicle" />
+
+
+        <item
+            android:id="@+id/nav_add_getAllDriver"
+            android:icon="@drawable/get_all_driver"
+            android:title="@string/menu_get_alldriver" />
+
+        <item
+            android:id="@+id/nav_add_getAllVehicle"
+            android:icon="@drawable/get_all_vehicle"
+            android:title="@string/menu_get_allvehicle" />
+        <item
+            android:id="@+id/nav_add_millBooking"
+            android:icon="@drawable/highway_miller"
+            android:title="@string/menu_get_millbooking" />
+        <item
+            android:id="@+id/nav_add_bookLoad"
+            android:icon="@drawable/book_load"
+            android:title="@string/menu_get_bookload" />
+
+        <item
+            android:id="@+id/nav_wallet"
+            android:icon="@drawable/wallet_account"
+            android:title="@string/menu_wallet" />
+        <item
+            android:id="@+id/nav_notification"
+            android:icon="@drawable/notification_image"
+            android:title="@string/menu_notification" />
+        <item
+            android:id="@+id/nav_rate_card"
+            android:icon="@drawable/ic_rate_card_star_border_black_24dp"
+            android:title="@string/menu_rate_card" />
+        <item
+            android:id="@+id/nav_help"
+            android:icon="@drawable/help_image"
+            android:title="@string/menu_Help" />
+        <item
+            android:id="@+id/nav_about"
+            android:icon="@drawable/about_image"
+            android:title="@string/menu_About" />
+        <item
+            android:id="@+id/nav_gallery"
+            android:icon="@drawable/money"
+            android:title="@string/menu_gallery" />
+        <item
+            android:id="@+id/nav_share"
+            android:icon="@drawable/money"
+            android:title="@string/menu_share" />
+        <item
+            android:id="@+id/nav_send"
+            android:icon="@drawable/money"
+            android:title="@string/menu_send" />
+
+        <item
+            android:id="@+id/nav_trmCondition"
+            android:icon="@drawable/term_and_condition"
+            android:title="@string/menu_term_condition" />
+        <item
+            android:id="@+id/nav_logout"
+            android:icon="@drawable/ic_power_settings_new_black"
+            android:title="@string/menu_logout"
+            />
+
+
+    </group>
+
+
+</menu>
